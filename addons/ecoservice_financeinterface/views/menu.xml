@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Part of Odoo. Developed by ecoservice (Uwe Böttcher und Falk Neubert GbR).
+# See COPYRIGHT and LICENSE at the top level of this module for full copyright and licensing details.
+-->
+
+<openerp>
+  <data>
+
+    <menuitem id="menu_ecoservice_finance_interface" name="Ecoservice Finance Interface" parent="account.menu_finance_configuration" sequence="10"/>
+
+    <act_window id="action_ecoservice_finance_interface_configuration"
+                name="Settings for Finance Interface"
+                res_model="ecoservice.finance.interface.config.settings"
+                view_mode="form"
+                target="inline"/>
+    <menuitem id="menu_ecoservice_finance_interface_config"
+              name="Finance Interface Settings"
+              parent="ecoservice_financeinterface.menu_ecoservice_finance_interface"
+              action="action_ecoservice_finance_interface_configuration"/>
+  </data>
+</openerp>

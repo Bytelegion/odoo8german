@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+# Part of Odoo. Developed by ecoservice (Uwe Böttcher und Falk Neubert GbR).
+# See COPYRIGHT and LICENSE at the top level of this module for full copyright and licensing details.
+-->
+
+<openerp>
+  <data>
+
+    <record model="ir.ui.view" id="eco_ecofi_form_view">
+      <field name="name">ecofi.form</field>
+      <field name="model">ecofi</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="ecoservice_financeinterface.eco_ecofi_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='journale']" position="before">
+          <field name="date_from"/>
+          <field name="date_to"/>
+        </xpath>
+        <xpath expr="//field[@name='csv_file']" position="after">
+          <field name="company_id"/>
+        </xpath>
+
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="eco_ecofi_tree_view">
+      <field name="name">ecofi.tree</field>
+      <field name="model">ecofi</field>
+      <field name="type">tree</field>
+      <field name="inherit_id" ref="ecoservice_financeinterface.eco_ecofi_tree_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='journale']" position="before">
+          <field name="date_from"/>
+          <field name="date_to"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</openerp>

@@ -1,0 +1,142 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* custom_invoice_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-04 07:02+0000\n"
+"PO-Revision-Date: 2015-09-04 07:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Draft Invoice"
+msgstr "Rechnungsentwurf"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Description"
+msgstr "Buchungstext"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Reference/Description"
+msgstr "Referenz / Beschreibung"
+
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Invoice Date:"
+msgstr "Rechnungsdatum:"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Delivery Date:"
+msgstr "Lieferdatum:"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Unit Price"
+msgstr "Preis/ME"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Stückpreis"
+msgstr "Preis/ME"
+
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Taxes"
+msgstr "Umsatzsteuer"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Amount"
+msgstr "Betrag"
+
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Subtotal:"
+msgstr "Nettobetrag:"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Taxes"
+msgstr "Steuern"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Tax"
+msgstr "Steuer"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Tax:"
+msgstr "Steuer:"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Total"
+msgstr "Betrag"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Total:"
+msgstr "Betrag:"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Base"
+msgstr "Steuergrundbetrag"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Basis"
+msgstr "Steuergrundbetrag"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Source:"
+msgstr "Referenzbeleg:"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Product"
+msgstr "Produkt"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Analytic Account"
+msgstr "Kostenstelle"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Unit of Measure"
+msgstr "Einheit"
+
+#. module: custom_invoice_report
+#: view:website:custom_invoice_report.report_invoice_custom_demo
+msgid "Tax Description"
+msgstr "Steuerbezeichnung"
+
+
+
+
+
+
+
+

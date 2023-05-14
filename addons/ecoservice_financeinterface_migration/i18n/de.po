@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ecoservice_financeinterface_migration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-17 08:31+0000\n"
+"PO-Revision-Date: 2017-05-17 08:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecoservice_financeinterface_migration
+#: view:res.company:ecoservice_financeinterface_migration.view_company_financeinterface_inherit_convert_entries
+msgid "Accounting Entries Re-Convert"
+msgstr "Buchungssätze erneut konvertieren"
+
+#. module: ecoservice_financeinterface_migration
+#: model:ir.model,name:ecoservice_financeinterface_migration.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: ecoservice_financeinterface_migration
+#: view:res.company:ecoservice_financeinterface_migration.view_company_financeinterface_inherit_convert_entries
+msgid "Convert Accounting Entries"
+msgstr "Buchungssätze konvertieren"
+
+#. module: ecoservice_financeinterface_migration
+#: field:res.company,entries_convert_msg:0
+msgid "Convert message"
+msgstr "Konvertierungsnachricht"
+
+#. module: ecoservice_financeinterface_migration
+#: field:res.company,entries_converted:0
+msgid "Entries converted"
+msgstr "Buchungssätze konvertiert"
+
+#. module: ecoservice_financeinterface_migration
+#: code:addons/ecoservice_financeinterface_migration/models/res_company.py:43
+#, python-format
+msgid "Exception: {move} --> {exception}\n"
+""
+msgstr "Fehler: {move} --> {exception}\n"
+""

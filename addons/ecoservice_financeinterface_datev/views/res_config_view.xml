@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Part of Odoo. Developed by ecoservice (Uwe Böttcher und Falk Neubert GbR).
+# See COPYRIGHT and LICENSE at the top level of this module for full copyright and licensing details.
+-->
+
+<openerp>
+  <data>
+
+    <record id="view_ecoservice_finance_interface_datev_configuration" model="ir.ui.view">
+      <field name="name">Finance Interface Settings</field>
+      <field name="model">ecoservice.finance.interface.config.settings</field>
+      <field name="inherit_id" ref="ecoservice_financeinterface.view_ecoservice_finance_interface_configuration"/>
+      <field name="arch" type="xml">
+        <group position="inside">
+          <field name="company_exportmethod" class="oe_inline"/>
+          <field name="company_enable_datev_checks"/>
+          <field name="company_datev_ignore_currency"/>
+          <field name="company_skr_no" class="oe_inline"/>
+          <field name="datev_client_no" class="oe_inline"/>
+          <field name="datev_consultant_no" class="oe_inline"/>
+        </group>
+      </field>
+    </record>
+
+  </data>
+</openerp>

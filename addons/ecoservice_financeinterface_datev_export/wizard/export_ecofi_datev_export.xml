@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+##############################################################################
+#    ecoservice_financeinterface_datev_export
+#    Copyright (c) 2013 ecoservice GbR (<http://www.ecoservice.de>).
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    This program based on OpenERP.
+#    OpenERP, Open Source Management Solution
+#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
+##############################################################################
+-->
+<openerp>
+<data>
+
+        <record id="datev_export_view" model="ir.ui.view">
+             <field name="name">Create Reference Data Export</field>
+             <field name="model">datev.reference.data.export</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                <form string="Reference Export" version="7.0">
+                	<field name="export_format_id" colspan="4"/>        	  	
+                    <button icon="gtk-ok" string="Start Export" name="startexport" type="object" colspan="4"/>
+                    
+                    <field name="file_export_log" colspan="4"/>
+                    <div>
+                        <p>Exportfile: <field name="file_export" readonly="1" filename="file_export_name"/></p>
+                    </div>
+                    <button icon="gtk-cancel" special="cancel" string="Cancel" colspan="4"/>   
+                </form>
+             </field>
+         </record>
+
+        <record id="datev_export_wizard" model="ir.actions.act_window">
+             <field name="name">Create Reference Data Export</field>
+             <field name="res_model">datev.reference.data.export</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">tree,form</field>
+             <field name="view_id" ref="datev_export_view"/>
+             <field name="target">new</field>
+       </record>
+
+        <menuitem
+            icon="STOCK_EXECUTE"
+            name="Create Reference Data Export"
+            action="datev_export_wizard"
+            id="datev_export_wizard_menu"
+            parent="ecoservice_financeinterface.menu_finance_interface"
+            groups="ecoservice_financeinterface.group_ecofi_financeinterface"/>
+
+ 
+        
+</data>
+</openerp>
+

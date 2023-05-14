@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+# Part of Odoo. Developed by ecoservice (Uwe Böttcher und Falk Neubert GbR).
+# See COPYRIGHT and LICENSE at the top level of this module for full copyright and licensing details.
+-->
+
+<openerp>
+  <data>
+
+    <!-- ACCOUNT ACCOUNT -->
+    <record id="view_account_form_inherit_ecofi_datev" model="ir.ui.view">
+      <field name="name">account.account.form.inherit.ecofi.datev</field>
+      <field name="model">account.account</field>
+      <field name="inherit_id" ref="account.view_account_form"/>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <xpath expr="//group" position="inside">
+          <group string="Datev">
+            <field name="ustuebergabe"/>
+            <field name="automatic"/>
+            <field name="datev_steuer"/>
+            <field name="datev_steuer_erforderlich"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+    <!-- Tax -->
+    <record id="view_tax_form_inherit_ecofi_buchungsschluessel_datev" model="ir.ui.view">
+      <field name="name">account.tax.form.inherit.ecofi.skonto.datev</field>
+      <field name="model">account.tax</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="account.view_tax_form"/>
+      <field name="arch" type="xml">
+        <field name="name" select="1" position="after">
+          <field name="datev_skonto"/>
+        </field>
+      </field>
+    </record>
+
+    <!-- Account Move Line -->
+    <record id="view_move_line_form2_inherit_datev_bu" model="ir.ui.view">
+      <field name="name">account.move.line.form2.inherit.datev_bu</field>
+      <field name="model">account.move.line</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="ecoservice_financeinterface.view_move_line_form2_inherit_ecofi2"/>
+      <field name="arch" type="xml">
+        <field name="ecofi_taxid" position="after">
+          <field name="ecofi_bu" select="2"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="view_move_line_form_inherit_ecofi" model="ir.ui.view">
+      <field name="name">account.move.line.form2.inherit.datev_steuer</field>
+      <field name="model">account.move.line</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="account.view_move_line_form"/>
+      <field name="arch" type="xml">
+        <field name="quantity" position="after">
+          <field name="datev_export_value" invisible="1"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="view_move_form_inherit_datev_bu" model="ir.ui.view">
+      <field name="name">account.move.form.inherit.ecofi2.datev_bu</field>
+      <field name="model">account.move</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="ecoservice_financeinterface.view_move_form_inherit_ecofi2"/>
+      <field name="arch" type="xml">
+        <field name="ecofi_taxid" position="after">
+          <field name="ecofi_bu" select="2"/>
+        </field>
+        <field name="date" position="after">
+          <field name="enable_datev_checks"/>
+        </field>
+        <xpath expr="//notebook" position="inside">
+          <page name="page_export_mismatch_lines" string="Miscalculated lines" attrs="{'invisible': [('export_mismatch', '=', 0)]}">
+            <group>
+              <div>
+                <label for="export_mismatch" />
+                <field name="export_mismatch"/>
+              </div>
+              <div>
+                <field name="export_mismatch_reason"/>
+              </div>
+            </group>
+            <field name="export_mismatch_lines" widget="one2many_list" context="{'line_id': line_id, 'journal_id': journal_id }">
+              <tree create="false" delete="false" editable="bottom" string="Miscalculated lines">
+                <field name="account_id" readonly="1" domain="[('company_id', '=', parent.company_id), ('deprecated', '=', False)]"/>
+                <field name="name" readonly="1"/>
+                <field name="analytic_account_id" groups="analytic.group_analytic_accounting" readonly="1"/>
+                <field name="debit" sum="Total Debit" readonly="1"/>
+                <field name="credit" sum="Total Credit" readonly="1"/>
+                <field name="datev_export_value"/>
+              </tree>
+            </field>
+          </page>
+
+        </xpath>
+      </field>
+    </record>
+
+    <record id="view_move_tree" model="ir.ui.view">
+      <field name="name">account.move.tree</field>
+      <field name="model">account.move</field>
+      <field name="inherit_id" ref="account.view_move_tree"/>
+      <field name="arch" type="xml">
+        <xpath expr="." position="replace">
+          <tree colors="red:export_mismatch!=0" decoration-info="state == 'draft'" string="Journal Entries">
+            <field name="export_mismatch" invisible="1"/>
+            <field name="date"/>
+            <field name="name"/>
+            <field name="partner_id"/>
+            <field name="ref"/>
+            <field name="journal_id"/>
+            <field name="amount" sum="Total Amount"/>
+            <field name="state"/>
+          </tree>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</openerp>

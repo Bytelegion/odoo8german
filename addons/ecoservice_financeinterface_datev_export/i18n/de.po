@@ -1,0 +1,310 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* ecoservice_financeinterface_datev_export
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-27 10:57+0000\n"
+"PO-Revision-Date: 2013-08-27 10:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecoservice_financeinterface_datev_export
+#: model:ir.actions.act_window,name:ecoservice_financeinterface_datev_export.ecofi_datev_formate_all
+#: model:ir.ui.menu,name:ecoservice_financeinterface_datev_export.menu_ecofi_datev_formate
+msgid "Datev Reference Format Configuration"
+msgstr "Datev Stammdatenexport Konfiguration"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,mako:0
+msgid "Mako"
+msgstr "Mako"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:datev.reference.data.export,file_export_log:0
+msgid "Export Log"
+msgstr "Export Log"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:datev.reference.data.export:0
+msgid "Reference Export"
+msgstr "Stammdatenexport"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:datev.reference.data.export:0
+msgid "Start Export"
+msgstr "Starte Export"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:ecofi.datev.spalten:0
+msgid "Export Columns"
+msgstr "Export Felder"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:datev.reference.data.export:0
+msgid "Filename"
+msgstr "Dateiname"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,mussfeld:0
+msgid "Mandatory field"
+msgstr "Pflichtfeld"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_paymentterms.py:113
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_paymentterms.py:120
+#, python-format
+msgid "Zahlungsbedingung: %s konnte nicht exportiert werden!\n"
+""
+msgstr ""
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,import_id:0
+msgid "Import"
+msgstr "Import"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:ecofi.datev.formate:0
+msgid "Default Config"
+msgstr "Standard Konfiguration"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:datev.reference.data.export,file_export_name:0
+msgid "Export Filename"
+msgstr "Export Dateiname"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:40
+#, python-format
+msgid "in a Date"
+msgstr "in eine Datum"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_paymentterms.py:74
+#, python-format
+msgid "Paymentterm %s has no balance line"
+msgstr "In der Zahlungsbedingung %s sind keine Nettotage definiert"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:125
+#, python-format
+msgid "Error !"
+msgstr "Fehler!"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,beschreibung:0
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:datev.reference.data.export,export_format_id:0
+msgid "Export Format"
+msgstr "Export Format"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:ecofi.datev.formate:0
+msgid "Field Config"
+msgstr "Feld Konfiguration"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:datev.reference.data.export,file_export:0
+msgid "Export File"
+msgstr "Exportdatei"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,datevid:0
+msgid "DatevID"
+msgstr "DatevID"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:39
+#, python-format
+msgid "in a Text"
+msgstr "in einen Text"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:37
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:38
+#, python-format
+msgid "in an Integer"
+msgstr "in einen Zahlenwert"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.formate,mako_help:0
+msgid "Mako Help"
+msgstr "Mako Hilfe"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_accounts.py:93
+#, python-format
+msgid "Account: %s could not be exported!\n"
+""
+msgstr "Konto: %s konnte nicht exportiert werden!\n"
+""
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:49
+#, python-format
+msgid "Value %s could not be convertet %s!"
+msgstr "Der Wert %s konnte nicht %s umgewandelt werden!"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.formate,name:0
+msgid "Name"
+msgstr "Name"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:41
+#, python-format
+msgid "in an Decimal"
+msgstr "in einen Dezimalwert"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,nks:0
+msgid "Decimal places"
+msgstr "Nachkommastellen"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export.py:126
+#, python-format
+msgid "Importformat not correct, Headervalue %s not found in the csv!"
+msgstr "CSV Template konnte nicht geladen werden, die Kopfzeile %s wurde nicht gefunden!"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.formate,csv_spalten:0
+msgid "Datev-Spalten"
+msgstr "Datev-Spalten"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:ecofi.datev.formate:0
+msgid "Import Template"
+msgstr "Import Template"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_paymentterms.py:15
+#, python-format
+msgid "Paymentterms"
+msgstr "Zahlungsbedingungen"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,feldname:0
+msgid "Fieldname"
+msgstr "Feldname"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,typ:0
+msgid "Fieldtype"
+msgstr "Feldtyp"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:ecofi.datev.formate:0
+msgid "Datev Export Formats"
+msgstr "Datev Export Formate"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,laenge:0
+msgid "Length "
+msgstr "Länge"
+
+#. module: ecoservice_financeinterface_datev_export
+#: model:ir.model,name:ecoservice_financeinterface_datev_export.model_ecofi_datev_formate
+msgid "Datev Export diverse Formate"
+msgstr "Datev Export diverse Formate"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_paymentterms.py:77
+#, python-format
+msgid "Paymentterm %s has more than 2 percent lines"
+msgstr "Zahlungbedingung %s hat mehr als zwei Skontozeilen"
+
+#. module: ecoservice_financeinterface_datev_export
+#: model:ir.actions.act_window,name:ecoservice_financeinterface_datev_export.datev_export_wizard
+#: model:ir.ui.menu,name:ecoservice_financeinterface_datev_export.datev_export_wizard_menu
+msgid "Create Reference Data Export"
+msgstr "Datev Stammdatenexport erzeugen"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.formate,datev_domain:0
+msgid "Domain"
+msgstr "Domain"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.formate,datev_type:0
+msgid "Exporttype"
+msgstr "Exporttyp"
+
+#. module: ecoservice_financeinterface_datev_export
+#: field:ecofi.datev.spalten,maxlaenge:0
+msgid "Maximal length"
+msgstr "Maximale Länge"
+
+#. module: ecoservice_financeinterface_datev_export
+#: model:ir.model,name:ecoservice_financeinterface_datev_export.model_datev_reference_data_export
+msgid "Reference Data Export"
+msgstr "Stammdaten Export"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_accounts.py:15
+#, python-format
+msgid "Accounts"
+msgstr "Konten"
+
+#. module: ecoservice_financeinterface_datev_export
+#: model:ir.model,name:ecoservice_financeinterface_datev_export.model_ecofi_datev_spalten
+msgid "Ecoservice Financial Interface Datev Spalten"
+msgstr "Stammdaten Export Spalten"
+
+#. module: ecoservice_financeinterface_datev_export
+#: view:datev.reference.data.export:0
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_paymentterms.py:29
+#, python-format
+msgid "Possible Mako Object paymentterm\n"
+"            Paymentterm Values:\n"
+"               'number'\n"
+"               'name'\n"
+"               'typ'\n"
+"               'netdays'\n"
+"               'skonto1days'\n"
+"               'skonto1percent'\n"
+"               'skonto2days'\n"
+"               'skonto2percent'\n"
+"               'error'\n"
+"               'log'\n"
+"            "
+msgstr "Mögliches Mako Objekt: paymentterm\n"
+"            paymentterm Attribute:\n"
+"               'number'\n"
+"               'name'\n"
+"               'typ'\n"
+"               'netdays'\n"
+"               'skonto1days'\n"
+"               'skonto1percent'\n"
+"               'skonto2days'\n"
+"               'skonto2percent'\n"
+"               'error'\n"
+"               'log'\n"
+"            "
+
+#. module: ecoservice_financeinterface_datev_export
+#: code:addons/ecoservice_financeinterface_datev_export/datev_export_accounts.py:55
+#, python-format
+msgid "Possible Mako Object account and partner\n"
+"\n"
+"            If you want to export the Code of the account and the Name of the Partner use:\n"
+"            ${account.code} and ${partner.name} as Makotext.\n"
+"            "
+msgstr "Mögliche Mako Objekte: account und partner\n"
+"\n"
+"            Wenn sie die Kontonummer eines Kontos und den Name eines Partners exportieren möchten:\n"
+"            ${account.code} und ${partner.name} als Makotext.\n"
+"            "
+

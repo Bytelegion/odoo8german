@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+# Part of Odoo. Developed by ecoservice (Uwe Böttcher und Falk Neubert GbR).
+# See COPYRIGHT and LICENSE at the top level of this module for full copyright and licensing details.
+-->
+
+<openerp>
+  <data>
+
+    <record id="export_ecofi_view" model="ir.ui.view">
+      <field name="name">Create Financial Export</field>
+      <field name="model">export.ecofi</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Financial Export">
+          <group>
+            <field name="company_id" class="oe_inline"/>
+            <field name="vorlauf_id"
+                   attrs="{'invisible': [('vorlauf_id', '=', False)]}"/>
+            <field name="journal_id"
+                   attrs="{'invisible': [('vorlauf_id','!=', False)], 'required': [('vorlauf_id','=',False)]}"
+                   domain="[('company_id', '=', company_id)]"/>
+          </group>
+          <group col="4">
+            <field name="export_type" class="oe_inline"/>
+            <newline/>
+            <field name="date_from"
+                   attrs="{'invisible': ['|', ('vorlauf_id', '!=', False), ('export_type', '!=', 'date')],
+                           'required': [('vorlauf_id', '=', False), ('export_type', '=', 'date')]}"/>
+            <field name="date_to"
+                   attrs="{'invisible': ['|', ('vorlauf_id','!=',False), ('export_type','!=', 'date')],
+                           'required': [('vorlauf_id','=',False), ('export_type','=', 'date')]}"/>
+          </group>
+
+          <footer>
+            <group>
+              <button icon="fa-check-square" string="Start Export" name="startexport" type="object" class="btn-primary"/>
+              <button icon="fa-minus-square" string="Cancel" special="cancel"/>
+            </group>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="ecoservice_ecofi_export_wizard" model="ir.actions.act_window">
+      <field name="name">Create Financial Export</field>
+      <field name="res_model">export.ecofi</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="export_ecofi_view"/>
+      <field name="target">new</field>
+    </record>
+
+    <menuitem
+      icon="STOCK_EXECUTE"
+      name="Create Financial Export"
+      action="ecoservice_ecofi_export_wizard"
+      id="ecoservice_ecofi_wizard_menu"
+      parent="menu_finance_interface"
+      groups="ecoservice_financeinterface.group_ecofi_financeinterface"/>
+
+    <act_window name="Create Financial Export"
+                res_model="export.ecofi"
+                src_model="ecofi"
+                view_mode="form"
+                target="new"
+                key2="client_action_multi"
+                id="action_create_export_from_ecofi"/>
+
+  </data>
+</openerp>

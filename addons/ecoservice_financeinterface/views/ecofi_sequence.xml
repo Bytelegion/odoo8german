@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+# Part of Odoo. Developed by ecoservice (Uwe Böttcher und Falk Neubert GbR).
+# See COPYRIGHT and LICENSE at the top level of this module for full copyright and licensing details.
+-->
+
+<openerp>
+  <data noupdate="1">
+
+    <record id="seq_type_ecofi" model="ir.sequence.type">
+      <field name="name">Finance Interface</field>
+      <field name="code">ecofi.vorlauf</field>
+    </record>
+
+    <record id="seq_eco_ecofi_vorlauf" model="ir.sequence">
+      <field name="name">VorlaufID</field>
+      <field name="code">ecofi.vorlauf</field>
+      <field name="prefix">VL</field>
+      <field name="padding">8</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+    </record>
+
+  </data>
+</openerp>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Part of Odoo. Developed by ecoservice (Uwe Böttcher und Falk Neubert GbR).
+# See COPYRIGHT and LICENSE at the top level of this module for full copyright and licensing details.
+-->
+
+<openerp>
+  <data>
+
+    <record id="view_ecoservice_finance_interface_configuration" model="ir.ui.view">
+      <field name="name">Finance Interface Settings</field>
+      <field name="model">ecoservice.finance.interface.config.settings</field>
+      <field name="arch" type="xml">
+        <form name="finance_interface_settings" string="Finance Interface Settings" class="oe_form_configuration">
+          <header>
+            <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+            <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+          </header>
+          <div class="content">
+            <group string="Finance Interface Configuration">
+              <field name="company_id"
+                     options="{'no_create': True, 'no_open': True,}"
+                     class="oe_inline"
+                     groups="base.group_multi_company"/>
+              <field name="company_finance_interface" class="oe_inline"/>
+              <field name="company_journal_ids"/>
+            </group>
+          </div>
+        </form>
+      </field>
+    </record>
+
+  </data>
+</openerp>

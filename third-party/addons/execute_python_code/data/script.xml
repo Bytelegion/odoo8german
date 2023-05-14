@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<record model="execute.python.code" id="execute_python_code_partner_script">
+    		<field name="name">In all Partner records, move content from street to street2 and remove leading and trailing white spaces from all fields and also if street and stree2 value is same, than street value set empty.</field>
+    		<field name="query_text">
+partners = self.env['res.partner'].search([])
+p_fields = partners._fields
+partner_fields = filter(lambda x:x!='vat' and p_fields.get(x).type in ['text', 'char', 'html'] and p_fields.get(x).store, p_fields)
+updated_partner_ids = []
+for partner in partners:
+    update_val = {}
+    
+    for p_field in partner_fields:
+        if partner[p_field] and partner[p_field].strip()!= partner[p_field]:
+            update_val.update({p_field:partner[p_field].strip()})
+            
+    if partner.street and not partner.street2:
+        street = partner.street
+        update_val.update({'street2' : street.strip(), 'street':None})
+    if partner.street and partner.street2 and partner.street.strip() == partner.street2.strip():
+        update_val.update({'street':None})
+        
+    if update_val:
+        partner.write(update_val)
+        updated_partner_ids.append(partner.id)
+result=updated_partner_ids
+    		</field>
+    	</record>
+    </data>
+</openerp>
